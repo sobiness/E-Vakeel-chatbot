@@ -1,76 +1,67 @@
-# Notion Question-Answering
+Certainly! Here's a sample README file for your Notion Langchain GPT LLM with Streamlit UI AI legal aid Chatbot:
 
-🤖Ask questions to your Notion database in natural language🤖
+---
 
-💪 Built with [LangChain](https://github.com/hwchase17/langchain)
+# Notion Langchain Chatbot
 
-# 🌲 Environment Setup
+## Overview
 
-In order to set your environment up to run the code here, first install all requirements:
+The Notion Langchain GPT LLM Chatbot is an AI-powered legal aid chatbot designed to provide legal assistance and guidance to users. It utilizes the GPT (Generative Pre-trained Transformer) language model developed by OpenAI to understand and generate human-like text responses. This chatbot is specifically tailored to assist with legal inquiries and questions, making it a valuable tool for individuals seeking legal advice and information.
 
-```shell
-pip install -r requirements.txt
-```
+## Features
 
-Then set your OpenAI API key (if you don't have one, get one [here](https://beta.openai.com/playground))
+- **Legal Expertise**: The chatbot has been trained to understand and respond to a wide range of legal questions and topics, including immigration law, intellectual property, real estate law, tax law, employment law, environmental law, family law, personal injury, banking and finance law, criminal defense, corporate law, and more.
 
-```shell
-export OPENAI_API_KEY=....
-```
+- **Streamlit User Interface**: The chatbot is accessible through a user-friendly Streamlit web interface, making it easy for users to interact with the AI and receive legal information and suggestions.
 
-# 📄 What is in here?
-- Example data from Blendle 
-- Python script to query Notion with a question
-- Code to deploy on StreamLit
-- Instructions for ingesting your own dataset
+- **Prompt-Based Interaction**: Users can input their legal questions and case descriptions as prompts, and the chatbot will generate responses and suggestions based on the provided information.
 
-## 📊 Example Data
-This repo uses the [Blendle Employee Handbook](https://www.notion.so/Blendle-s-Employee-Handbook-7692ffe24f07450785f093b94bbe1a09) as an example.
-It was downloaded October 18th so may have changed slightly since then!
+- **Lawyer Suggestions**: The chatbot can provide lawyer recommendations based on the user's case description and legal domain. It offers details about lawyers' names, expertise, locations, experience levels, success rates, and contact information.
 
-## 💬 Ask a question
-In order to ask a question, run a command like:
+- **Therapist Recommendations**: In addition to legal assistance, the chatbot can also recommend therapists or counselors for undertrial prisoners, providing details about their names, locations, experience, contact information, and descriptions.
 
-```shell
-python qa.py "is there food in the office?"
-```
+## Getting Started
 
-You can switch out `is there food in the office?` for any question of your liking!
+To run the Notion Langchain GPT LLM Chatbot, follow these steps:
 
-This exposes a chat interface for interacting with a Notion database.
-IMO, this is a more natural and convenient interface for getting information.
+1. Clone the repository to your local machine:
 
-## 🚀 Code to deploy on StreamLit
+   ```bash
+   git clone https://github.com/your-repo/notion-langchain-gpt-llm-chatbot.git
+   ```
 
-The code to run the StreamLit app is in `main.py`. 
-Note that when setting up your StreamLit app you should make sure to add `OPENAI_API_KEY` as a secret environment variable.
+2. Install the required Python packages:
 
-## 🧑 Instructions for ingesting your own dataset
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Export your dataset from Notion. You can do this by clicking on the three dots in the upper right hand corner and then clicking `Export`.
+3. Set up the OpenAI API key:
 
-<img src="export_notion.png" alt="export" width="200"/>
+   - Create an OpenAI account and obtain an API key.
+   - Add your API key to the environment variables or create a `.env` file with the key.
 
-When exporting, make sure to select the `Markdown & CSV` format option.
+4. Run the Streamlit app:
 
-<img src="export_format.png" alt="export-format" width="200"/>
+   ```bash
+   streamlit run main.py
+   ```
 
-This will produce a `.zip` file in your Downloads folder. Move the `.zip` file into this repository.
+5. Access the chatbot through your web browser by visiting the provided URL.
 
-Run the following command to unzip the zip file (replace the `Export...` with your own file name as needed).
+## Usage
 
-```shell
-unzip Export-d3adfe0f-3131-4bf3-8987-a52017fc1bae.zip -d Notion_DB
-```
+- Input your legal question or case description in the provided text box.
+- The chatbot will generate responses and lawyer/therapist suggestions based on your input.
+- Review the provided information and contact the recommended lawyers or therapists if needed.
 
-Run the following command to ingest the data.
 
-```shell
-python ingest.py
-```
+## License
 
-Boom! Now you're done, and you can ask it questions like:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```shell
-python qa.py "is there food in the office?"
-```
+## Acknowledgments
+
+- The project makes use of the OpenAI GPT-3 language model.
+- Special thanks to the Streamlit team for their user-friendly UI framework.
+
