@@ -20,7 +20,7 @@ chain = VectorDBQAWithSourcesChain.from_llm(llm=OpenAI(temperature=0), vectorsto
 
 
 # From here down is all the StreamLit UI.
-st.set_page_config(page_title="E-Vakil ChatBot", page_icon=":robot:")
+st.set_page_config(page_title="இ-Vakeel ChatBot", page_icon=":robot:")
 st.header("E-Vakil ChatBot")
 
 if "generated" not in st.session_state:
